@@ -6,16 +6,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import java.sql.Blob;
 
 @Entity
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-public class Recommendation extends BaseEntity {
+public class Image_Blob extends BaseEntity {
 
-    private String id;
-    private Long post_no;
-    private boolean push;
+    private String img_name;
+    private Blob img_blob;
+
 
 }

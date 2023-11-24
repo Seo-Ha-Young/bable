@@ -3,11 +3,8 @@ package writing.board.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
-import writing.board.dto.EssayDTO;
 import writing.board.dto.ImageDTO;
-import writing.board.entity.Essay;
-import writing.board.entity.Image;
-import writing.board.repository.EssayRepository;
+import writing.board.entity.Image_Blob;
 import writing.board.repository.ImageRepository;
 
 import javax.transaction.Transactional;
@@ -23,9 +20,9 @@ public class ImageServiceImpl implements ImageService{
     @Transactional
     public Long register(ImageDTO imageDTO) {
         Map<String, Object> entityMap = dtoToEntity(imageDTO);
-        Image image = (Image) entityMap.get("image");
-        imageRepository.save(image);
-        return image.getNo();
+        Image_Blob image_blob = (Image_Blob) entityMap.get("image");
+        imageRepository.save(image_blob);
+        return image_blob.getNo();
     }
 
 

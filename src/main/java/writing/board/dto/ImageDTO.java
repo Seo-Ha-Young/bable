@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Blob;
 import java.time.LocalDateTime;
 
 @Data
@@ -15,5 +16,6 @@ public class ImageDTO {
 
     private Long no;
     private String img_name;
+    private Blob img_blob;
     private LocalDateTime regDate;
 }
